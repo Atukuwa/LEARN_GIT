@@ -1,0 +1,2 @@
+git --global user.name "aliyu"
+git --global user.email "aliyu"
