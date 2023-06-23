@@ -15,20 +15,29 @@ git clone <url of the repo you want to clone> << this is done in the comand prom
 git clone <https://PAT@url of the repo> << this is for clonning a  private repo. PAT is a token you genetrate from yor github account or someone gives you. 
 
 
-                                        <pushing you local code to github> 
+                                        <pushing your local code to github> 
                                         NOTE-> you must create a repo on github before you push any local code 
                                         
 git remote -v << will return the url of the remote branch on github you connected your working directory with that is if you have connected it to a remote repository
 
 git remote add name <url> << this command will link your local repo to the repo that you provided its url on the command. name in the comand should be origin which is your main branch.
+
 git remote rename <old-name> <new-name> << this comand will rename the main branch on your github repo.
 
 git remote remove origin << this will terminate the connection between your local computer and the github repo.
 
 git push -u origin <name_of_the_main_branch> << this will push your local work to the main branch on your github repo.
+                            <retriving code from github>
 
 git fetch origin  <branch_name> << When you run "git fetch" it connects to the remote repository and checks if there are any new commits or branches available. It then downloads any new changes and stores them in a separate branch called FETCH_HEAD.This allows you to review the changes and decide whether you want to merge them into your current branch or not.  Hint: Running "git fetch" regularly is a good practice to keep your local repository up-to-date with the remote one.
 
 git pull << this command will pull the code from the remote repo and merge it to your files in the local directory. it will overite evrytyhing and keep you upto date with the remote repo.
 
 git checkout origin/main << this command will help you view the FETCH_HEAD branch where fetched files are stored and checked before they are finally merged with the working directory.
+
+                                <branching on git and github>
+git branch <branch name> << this command creates a new branch. it branches off with the current files and last changes you have made on your main branch. that is if you are branching from the main branch. else it branches off from  the branch you are in and create a sub branch.
+
+git branch << this command returns the branches in that repository
+
+git switch <branch_name> << this command switches from one branch to another  
