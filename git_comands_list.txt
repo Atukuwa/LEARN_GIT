@@ -1,0 +1,34 @@
+git --global user.name "aliyu" << to set your user name with the remote github      
+git --global user.email "aleeyuatukuwa@yahoo.com" << set your email to the remote github
+git config user.name << return the user name you linked your local git with to the remote github
+git config user.email << return the email you linked your local git with to the remote github
+
+                                        <creating a git repo and adding files to br tracked by git>
+git init << it initializes the folder you are in to be tracked by git it creats a .git folder, meaning the makes the folder a git repository
+git add <filename>  << moves the particular filename you typed after the command to the staging area, youn do  "git add ." to move everything in the directory
+git commit -m "any commit"  << it commit on the entier content of the staging area with the commit message into the git repository 
+git status << this will return the current branch or return fatal erro if your working directory is not tracked by git.
+git log << will retrun all the commit you have logged so far on your repo and a HEAD will point to the branch you are on.
+
+                                        <cloning a git repository from git hub>
+git clone <url of the repo you want to clone> << this is done in the comand prompt it copies all the files into the directory you are in.
+git clone <https://PAT@url of the repo> << this is for clonning a  private repo. PAT is a token you genetrate from yor github account or someone gives you. 
+
+
+                                        <pushing you local code to github> 
+                                        NOTE-> you must create a repo on github before you push any local code 
+                                        
+git remote -v << will return the url of the remote branch on github you connected your working directory with that is if you have connected it to a remote repository
+
+git remote add name <url> << this command will link your local repo to the repo that you provided its url on the command. name in the comand should be origin which is your main branch.
+git remote rename <old-name> <new-name> << this comand will rename the main branch on your github repo.
+
+git remote remove origin << this will terminate the connection between your local computer and the github repo.
+
+git push -u origin <name_of_the_main_branch> << this will push your local work to the main branch on your github repo.
+
+git fetch origin  <branch_name> << When you run "git fetch" it connects to the remote repository and checks if there are any new commits or branches available. It then downloads any new changes and stores them in a separate branch called FETCH_HEAD.This allows you to review the changes and decide whether you want to merge them into your current branch or not.  Hint: Running "git fetch" regularly is a good practice to keep your local repository up-to-date with the remote one.
+
+git pull << this command will pull the code from the remote repo and merge it to your files in the local directory. it will overite evrytyhing and keep you upto date with the remote repo.
+
+git checkout origin/main << this command will help you view the FETCH_HEAD branch where fetched files are stored and checked before they are finally merged with the working directory.
